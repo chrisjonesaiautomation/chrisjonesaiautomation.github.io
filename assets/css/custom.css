@@ -1,0 +1,60 @@
+/*
+	Custom overrides — modern refresh layered on top of the Massively template.
+	Loaded after main.css so these rules win; main.css/main.scss are left
+	untouched so the original template can still be restored if needed.
+*/
+
+:root {
+	--font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Swap the template's serif/Google-Fonts pairing for a fast, modern system-font stack */
+body, input, select, textarea, p, li, .roadmap-note {
+	font-family: var(--font-sans) !important;
+	font-weight: 400 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.logo, .button, nav .links a, nav .icons a,
+#copyright, .badge {
+	font-family: var(--font-sans) !important;
+}
+
+/* Coming-soon badge used on in-progress case studies */
+.badge {
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.35rem 1rem;
+	border-radius: 3rem;
+	background-color: #18bfef;
+	color: #ffffff !important;
+	font-size: 0.7rem;
+	font-weight: 700 !important;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+/* Roadmap teaser line replacing the old grid of dead placeholder cards */
+.roadmap-note {
+	text-align: center;
+	color: #717981;
+	font-size: 0.95rem;
+	margin: 0;
+}
+
+/* Softer, more modern card and button treatment */
+#main > .post.featured {
+	border-radius: 12px;
+}
+
+.button {
+	border-radius: 6px !important;
+}
+
+.button.icon.solo {
+	border-radius: 50% !important;
+}
+
+article.post, section.post {
+	transition: box-shadow 0.2s ease-in-out;
+}
