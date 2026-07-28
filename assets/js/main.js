@@ -1,3 +1,7 @@
+// Only hide .reveal elements once this script has actually loaded and run —
+// otherwise (blocked script, slow network, etc.) content just stays visible.
+document.documentElement.classList.add('js');
+
 // Close the mobile nav after a link is tapped
 document.querySelectorAll('.nav__links a').forEach(function (link) {
 	link.addEventListener('click', function () {
